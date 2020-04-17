@@ -15,6 +15,7 @@ public final class Nodo<T> {
     private Nodo<T> left;
     private Nodo<T> right;
     private boolean childPosition;
+    private int level;
     
     public Nodo(T data){
         this.data=data;
@@ -83,5 +84,19 @@ public final class Nodo<T> {
      */
     public boolean isChildPosition() {
         return childPosition;
+    }
+
+    /**
+     * @return the level
+     */
+    public int getLevel() {
+        return level;
+    }
+
+    /**
+     * @param level the level to set
+     */
+    public void setLevel(int level) {
+        this.level = level;
     }
 }

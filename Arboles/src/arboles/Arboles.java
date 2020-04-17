@@ -15,8 +15,29 @@ public class Arboles {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
-        BinaryTree<Integer> tree = new BinaryTree(50);
+//        MaxHeap heap = new MaxHeap();
+//        heap.insert(31);
+//        heap.insert(51);
+//        heap.insert(53);
+//        heap.insert(28);
+//        heap.insert(47);
+//        heap.insert(22);
+//        System.out.println(heap.getDataHeap());
+//        System.out.println("");
+//        heap.ExtractMax();
+//        System.out.println(heap.getDataHeap());
+        BinaryTree<Integer> tree = new BinaryTree();
+        //20,30,10,50,6,7,80
+        tree.Add(20);
+        tree.Add(30);
+        tree.Add(10);
+        tree.Add(50);
+        tree.Add(6);
+        tree.Add(7);
+        tree.Add(80);
+        tree.Add(32);
+        tree.Add(51);
+        
         tree.Add(10);
         tree.Add(70);
         tree.Add(9);
@@ -51,14 +72,25 @@ public class Arboles {
         tree.Add(64);
         tree.Add(63);
         tree.Add(0);
-
-        System.out.println("Sin borrar");
+        System.out.println("Inorden");
         tree.inorden();
-        tree.delete(2);//
         System.out.println("");
-        System.out.println("Borrado");
-        tree.inorden();
-
+        System.out.println("");
+        System.out.println("preorden");
+        tree.preorden();
+        System.out.println("");
+        System.out.println("");
+        System.out.println("postorden");
+        tree.postorden();
+        System.out.println("");
+        System.out.println("Hojas");
+        System.out.println(tree.getLeaves());
+        System.out.println("Nodos");
+        System.out.println(tree.getSize());
+        System.out.println("Último nivel");
+        System.out.println(tree.heigth());
+        System.out.println("Level order");
+        tree.LevelOrder();
     }
     
 }
