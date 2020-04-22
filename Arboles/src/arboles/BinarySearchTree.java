@@ -218,10 +218,8 @@ public class BinarySearchTree {
 
             } else {
                 if(root==v){
-                    BinaryNode minimum = getMinor(v.getRight());
-                    Delete(minimum.getData());
-                    v.setData(minimum.getData());
-                    minimum.setLevel(v.getLevel());
+                    root=v.getLeft();
+                    v.setLeft(null);
                 }
                 else if (position) {
                     this.father.setRight(v.getLeft());
