@@ -238,9 +238,6 @@ public class BinarySearchTree {
         }
         nodes--;
         }
-        else{
-            
-        }
     }
 
     public BinaryNode getMinor(BinaryNode currentRoot) {
